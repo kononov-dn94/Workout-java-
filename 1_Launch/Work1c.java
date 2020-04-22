@@ -1,16 +1,4 @@
-/*										//отсутствует класс
-public static void main (String [] args) {					//публичная функция возвращающая нечего main (передающая строчный массив под названием args)
-	int x = 5;
-	while (x > 1) {
-		x = x - 1;
-		
-		if (x < 3) {
-			System.out.println("маленький икс");
-		}
-	}
-}*/
-
-class Task1b {							//класс с именем Task1b
+class Work1с {
 	public static void main (String [] args) {		//публичная функция возвращающая нечего main (передающая строчный массив под названием args)
 		int x = 5;					//создаем переменную x и приравниваем ее к значению 5
 
