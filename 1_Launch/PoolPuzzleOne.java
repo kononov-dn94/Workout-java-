@@ -6,7 +6,7 @@ class PoolPuzzleOne {
 			System.out.print("a");
 			if (x < 1) {
 				System.out.print(" ");
-			}
+				}
 			System.out.print("n");
 			if (x > 1) {
 				System.out.print(" oyster");
@@ -18,7 +18,7 @@ class PoolPuzzleOne {
 			if (x < 1) {
 				System.out.print("oise");	
 			}
-			System.out.print("");
+			System.out.println("");
 			x = x + 1;
 		}
 	}
