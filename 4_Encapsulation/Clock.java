@@ -1,5 +1,5 @@
 class Clock {
-	String time;
+	private String time;
 
 	void setTime(String t) {
 		time = t;
@@ -12,11 +12,26 @@ class Clock {
 
 class ClockTestDrive {
 	public static void main (String[] args) {
+
 		
 		Clock c = new Clock();
 
 		c.setTime("1234");
-		String tod = c.getTime();
-		System.out.println("время: " + tod);
+		System.out.println(c.getTime());
+
+		c.setTime("qwerty");
+		System.out.println(c.getTime());
+
+		// String tod = c.getTime();
+		// System.out.println("время: " + tod);
+
+
+		/*System.out.println(x);
+		System.out.println(y);
+
+	        for(int i = 0; i < args.length; i++) {
+		    System.out.println(args[i]);
+		}*/
+ 
 	}
 }
