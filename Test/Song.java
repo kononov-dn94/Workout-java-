@@ -11,8 +11,13 @@ class Song {
 	String Artist;
 	String Title;
 	
+
+	void checkTHIS(String Artist) {
+		System.out.println(this.Artist);
+		System.out.println(Artist);
+	}
 	void setArtist(String a) {
-		Artist = a;
+		this.Artist = a;
 	}
 
 	String getArtist() {
@@ -33,29 +38,47 @@ class Song {
 	}
 	
 	void setArtistTitle(String a, String t) {
-		
+/*		this.Artist = a;
+		this.Title = t; */
+		setArtist(a);
+		this.setTitle(t);
+		System.out.println(this.Artist);
+		System.out.println(this.Title);
 	}
-
+/*
 	String[] getArtistTitle() {
 		num[1] = a;
 		num[2] = t;
 	}
-
+*/	
 }
 
 class SongTestDrive {
+	int x;
 
 	public static void main(String[] args) {
 		Song x = new Song();
+		this.x 
+		/*Song y = new Song();
 		String Result;
 		x.setArtist("qwerty");
-		System.out.println(x.getArtist());
+		x.checkTHIS("check");*/
+		
+		x.setArtistTitle("abc", "cde");
+		System.out.println(x.Artist + " " + x.Title);
+
+		/*System.out.println(x.getArtist());
 		x.setTitle("ytrewq");
+		String temp = x.getTitle();
 		System.out.println(x.getTitle());
 		System.out.println(x.Play());
 		Result = x.Play(); 
-		System.out.println(Result);
+		System.out.println(Result);*/
 		
 
+	}
+
+	void func() {
+		x
 	}
 }
