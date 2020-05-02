@@ -38,19 +38,20 @@ class Song {
 	}
 	
 	void setArtistTitle(String a, String t) {
-/*		this.Artist = a;
-		this.Title = t; */
-		setArtist(a);
-		this.setTitle(t);
-		System.out.println(this.Artist);
-		System.out.println(this.Title);
+		this.Artist = a;
+		this.Title = t;
+		/* this.setArtist(a);
+		this.setTitle(t); */
+
 	}
-/*
-	String[] getArtistTitle() {
-		num[1] = a;
-		num[2] = t;
+
+	public String[] getArtistTitle() {
+		String[] numArtistTitle = new String[2];
+		numArtistTitle[0] = Artist;
+		numArtistTitle[1] = Title;
+		return numArtistTitle;
 	}
-*/	
+	
 }
 
 class SongTestDrive {
@@ -58,7 +59,16 @@ class SongTestDrive {
 
 	public static void main(String[] args) {
 		Song x = new Song();
-		this.x 
+		Song y = new Song();
+
+		String[] array, array2;
+		
+		x.setArtistTitle();
+		y.setArtistTitle();
+		array = x.getArtistTitle();
+		array2 = y.getArtistTitle();
+		
+
 		/*Song y = new Song();
 		String Result;
 		x.setArtist("qwerty");
@@ -78,7 +88,4 @@ class SongTestDrive {
 
 	}
 
-	void func() {
-		x
-	}
 }
