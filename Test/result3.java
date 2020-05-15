@@ -1,20 +1,3 @@
-class introductory {
-	public static void main(String[] arg) {
-		int x;
-		int y;
-		x = 11;
-		y = 11;
-
-		Tickler[]obs = new Tickler[5];
-			while (x < 110) {
-			obs[x] = new Tickler();
-			obs[x].ivar = y;
-			y = y * 10;
-			x = x * 10;
-		}
-	}
-}
-
 class result3 {
 	int a;
 	int b;
@@ -26,4 +9,31 @@ class result3 {
 	}
 }
 
+
+class testResult {
+	public static void main(String[] arg) {
+
+
+		result3[] mass = new result3[5];
+		
+		for(int i = 0; i < 5; i++) { 
+			mass[i] = new result3();
+			mass[i].a = i;
+			mass[i].b = i * 10;
+			//заполнить ячейки массива через цикл			
+			//заполнить переменные a = i и b = i * 10 для каждого объекта
+			System.out.println(mass[i].a);
+			System.out.println(mass[i].b);
+			System.out.println();
+		}
+		
+		/*for() {
+			//вызывает функцию умножения и записывает результать
+		}*/
+
+		/*for() {
+			//выводит залультат умножения вместе с множителем
+		}*/
+	}
+}
 
