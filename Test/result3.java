@@ -26,14 +26,21 @@ class testResult {
 			System.out.println(mass[i].b);
 			System.out.println();
 		}
-		
-		/*for() {
-			//вызывает функцию умножения и записывает результать
-		}*/
 
-		/*for() {
-			//выводит залультат умножения вместе с множителем
-		}*/
+		//вызывает функцию умножения и записывает результать
+
+		int[] massResult = new int[5];
+
+		for(int y = 0; y < 5; y++) {
+			massResult[y] = mass[y].getMultiplication(); //массив, который хранит результат умножения [5 элементов в данном примере] = массив объектов, хранящий значения переменных а и b.(ссылается на функцию класса result3) getMultiplication();
+			System.out.println(massResult[y]);
+		}
+
+		//выводит залультат умножения вместе с множителем
+		for(int x = 0; x < 5; x++) {
+			//System.out.format("%d * %d = %d%n", mass[x].a, mass[x].b, massResult[x]);	
+			System.out.println(mass[x].a + " * " + mass[x].b + " = " + massResult[x]);
+		}
 	}
 }
 
