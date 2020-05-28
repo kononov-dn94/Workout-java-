@@ -1,30 +1,38 @@
 class result5 {
-	public static void main(String[] args) {
-		int A;
-		int B;
-		int result;
+	int a;
+	int b;
 
-		void setA(int A) {
-			this.A = 2;
-		}
+	public int result() {
+		return a + b;
+	}
 
-		int getA() {
-			return A;
-		}
+	public int getA() {
+		return a;
+	}
 
-		void setB(int B) {
-			this.B = 3;
-		}
-		
-		int getB() {
-			return B;
-		}
+	public void setA(int a) {
+		this.a = a;
+	}
 
-		public void Multiplication() {
-			result = A * B;
-		}
-	
-		System.out.println(result);
+	public int getB() {
+		return b;
+	}
+
+	public void setA(int a) {
+		this.b = b;
+	}
+
+}
+
+class testResult {
+	public static void main(String[] arg) {
+		result5 result = new result();
+
+		result.setA(10);
+		System.out.println(result.getA());
+
+		result.setB(4);
+		System.out.println(result.getB());
 	}
 }
 
