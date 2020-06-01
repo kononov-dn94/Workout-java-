@@ -18,7 +18,7 @@ class result6 {
 		return b;
 	}
 
-	public void setA(int a) {
+	public void setA(int b) {
 		this.b = b;
 	}
 

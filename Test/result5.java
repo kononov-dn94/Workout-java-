@@ -2,11 +2,11 @@ class result5 {
 	int a;
 	int b;
 
-	public int result() {
+	public int getResult(int a, int b) {
 		return a * b;
 	}
 
-	public int getA() {
+	/*public int getA() {
 		return a;
 	}
 
@@ -20,7 +20,7 @@ class result5 {
 
 	public void setB(int a) {
 		this.b = b;
-	}
+	}*/
 
 }
 
