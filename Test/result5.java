@@ -3,7 +3,7 @@ class result5 {
 	int b;
 
 	public int result() {
-		return a + b;
+		return a * b;
 	}
 
 	public int getA() {
@@ -18,7 +18,7 @@ class result5 {
 		return b;
 	}
 
-	public void setA(int a) {
+	public void setB(int a) {
 		this.b = b;
 	}
 
@@ -26,7 +26,7 @@ class result5 {
 
 class testResult {
 	public static void main(String[] arg) {
-		result5 result = new result();
+		result5 result = new result5();
 
 		result.setA(10);
 		System.out.println(result.getA());
