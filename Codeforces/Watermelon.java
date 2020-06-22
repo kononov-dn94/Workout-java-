@@ -8,7 +8,7 @@ public class Watermelon {
 		if((kg > 2) && (kg%2 == 0)) {
 			System.out.println("YES");
 		} else {
-			System.out.println("NO");
+			System.out.println("NO"); //
 		}
 	}
 }
