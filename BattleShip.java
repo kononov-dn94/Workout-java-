@@ -80,12 +80,12 @@ public class BattleShip {
 	public static void generateBattleField(int[][] battleField, String playerName) throws IOException {
 		int deck = 4;
 		while(deck != 0) {
-			/* System.out.println(playerName + " размести свою пасудину " + deck + " колличеством клеток, боец!");
+			System.out.println(playerName + " размести свою пасудину " + deck + " колличеством клеток, боец!");
 			printField(battleField);
 			System.out.println();
 
 			int x = -1;
-			while (x < 0 )*/
+			while (x < 0 )
 		}
 	}
 }
