@@ -116,7 +116,7 @@ public class BattleShip {
 		}
 	}
 	
-	/*public static boolean isAvailable(int x, int y, int deck, int rotation, itn[][] battleField) {...} */
+	public static boolean isAvailable(int x, int y, int deck, int rotation, itn[][] battleField) {...} 
 
 	public static void makeTurn(String playerName, int[][] monitor, int[][] enemyBattlefield) {
 		clearScreen();
@@ -158,7 +158,7 @@ public class BattleShip {
 		} while (hit);
 	}
 
-	/*public static boolean checkWinCondition() {...}
+	public static boolean checkWinCondition() {...}
 
 	public static void clearScreen() {
 		try {
@@ -166,5 +166,5 @@ public class BattleShip {
 		} catch (InterruptedException | IOException e) {
 			e.printStackTrace();
 		}
-	}*/
+	}
 }
