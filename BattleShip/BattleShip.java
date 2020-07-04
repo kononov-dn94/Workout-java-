@@ -86,7 +86,7 @@ public class BattleShip {
 
 			int x = -1;
 			while(x < 0 || x > 9) {
-				System.out.println("Введите 0X координату (0-9):");
+				System.out.println("Введите nX координату (0-9):");
 				x = scanner.nextInt();
 			}
 	
@@ -130,13 +130,13 @@ public class BattleShip {
 
 			int x = -1;
 			while(x < 0 || x > 9) {
-				System.out.println("Введите 0X координату (0-9)");
+				System.out.println("Введите nX координату (0-9)");
 				x = scanner.nextInt();
 			}
 		
 			int y = -1;
 			while(y < 0 || y > 9) {
-				System.out.println("Введите 0Y координату (0-9)");
+				System.out.println("Введите nY координату (0-9)");
 				y = scanner.nextInt();
 			}
 
