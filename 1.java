@@ -18,16 +18,19 @@ public class Battleship {
 //        System.out.println(playerName1);
 //        System.out.println("Player#2 name: ");
 //        System.out.println(playerName2);
+        placeShips();
 
 
     }
 
     public static void placeShips() { //метод расстановки кораблей
         int deck = 4; //счетчик, инициализация для 4-х палубного корабля
-        while(deck >= 1){
+        while(deck >= 1) {
             System.out.println();
             System.out.println(playerName1 + ", please place your " + deck +"-deck ship on the battlefield:");
             System.out.println();
+
+            //drawField(battlefield1); //че за хуйня, почему я не могу вызвать метот
 
             System.out.println("please enter nX coordinate:");
             int x = scanner.nextInt(); //объект scanner вызывает метод nextInt который вернет целое число в переменную x и запишет его значение
@@ -42,7 +45,8 @@ public class Battleship {
                 if(direction == 1){
                     battlefield1[x][y+1] = 1;
                 } else {
-                    battlefield1[x+i][y] = 1;
+                    battlefield1[x + i][y] = 1;
+                }
             }
 
         }
@@ -53,7 +57,7 @@ public class Battleship {
         System.out.println("  0 1 2 3 4 5 6 7 8 9");
         for(int i = 0; i < battlefield.length; i++) { //цикл вывода(отображения игрового поля)
             System.out.print(i + " ");
-            for (int j = 0; j < battlefield[1].length; j++) {
+            for (int j = 0; j < battlefield[1].length; j++) { //цикл вывода элементов для каждой строки
                 if(battlefield[i][j] == 0) {
                     System.out.print("- ");
                 } else {
