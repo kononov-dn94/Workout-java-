@@ -30,7 +30,7 @@ public class Battleship {
             System.out.println(playerName1 + ", please place your " + deck +"-deck ship on the battlefield:");
             System.out.println();
 
-            //drawField(battlefield1); //че за хуйня, почему я не могу вызвать метот
+            drawField(battlefield1); //че за хуйня, почему я не могу вызвать метот
 
             System.out.println("please enter nX coordinate:");
             int x = scanner.nextInt(); //объект scanner вызывает метод nextInt который вернет целое число в переменную x и запишет его значение
@@ -64,6 +64,7 @@ public class Battleship {
                     System.out.print("X ");
                 }
             }
+            System.out.println();
         }
     }
 }
