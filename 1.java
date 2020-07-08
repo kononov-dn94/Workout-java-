@@ -13,11 +13,11 @@ public class Battleship {
         playerName1 = scanner.nextLine(); //объект scanner вызывает метод nextLine() который вернет строку введенную с клавы переменной playerName1
         System.out.println("Player#2, please enter your name:");
         playerName2 = scanner.nextLine(); //объект scanner вызывает метод nextLine() который вернет строку введенную с клавы переменной playerName2
-
-//        System.out.println("Player#1 name: ");
-//        System.out.println(playerName1);
-//        System.out.println("Player#2 name: ");
-//        System.out.println(playerName2);
+ 
+        System.out.println("Player#1 name: ");
+        System.out.println(playerName1);
+        System.out.println("Player#2 name: ");
+        System.out.println(playerName2);
         placeShips();
 
 
