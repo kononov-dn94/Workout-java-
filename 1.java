@@ -18,7 +18,7 @@ public class Battleship {
         System.out.println(playerName1);
         System.out.println("Player#2 name: ");
         System.out.println(playerName2);
-        placeShips();
+      //  placeShips();
 
 
     }
