@@ -108,7 +108,7 @@ public class Battleship {
         }
     }
 
-    public static void isWinCondition() { //метод распознавания победы одного из игроков
+    public static boolean isWinCondition() { //метод распознавания победы одного из игроков
         int counter1 = 0; //переменная, хранящая кол-во попаданий
         for (int i = 0; i < monitor1.length; i++) { //счетчик для 1-го игрока
             for (int j = 0; j < monitor1.length; j++) {
