@@ -15,21 +15,21 @@ public class Battleship {
         playerName1 = scanner.nextLine(); //объект scanner вызывает метод nextLine() который вернет строку введенную с клавы переменной playerName1
         System.out.println("Player#2, please enter your name:");
         playerName2 = scanner.nextLine(); //объект scanner вызывает метод nextLine() который вернет строку введенную с клавы переменной playerName2
-
-//        System.out.println("Player#1 name: ");
-//        System.out.println(playerName1);
-//        System.out.println("Player#2 name: ");
-//        System.out.println(playerName2);
+        
         placeShips(playerName1, battlefield1);
         placeShips(playerName2, battlefield2);
 
-        boolean endGame = false;
-        do {
+        while(true) {
             makeTurn(playerName1, monitor1, battlefield2); //вызов метода если ход 1-го игрока
+            if(isWinCondition()) { //после каждого хода проверяем, не наступила ли победа
+                break; //...и если условие "победы" совпало - прерываем цикл
+            }
+
             makeTurn(playerName2, monitor2, battlefield1); //вызов метода если ход 2-го игрока
-        } while(!endGame); //пока endGame не true - выполняем do
-
-
+            if(isWinCondition()) { //после каждого хода проверяем, не наступила ли победа
+                break; //...и если условие "победы" совпало - прерываем цикл
+            }
+        }
     }
 
     public static void placeShips(String playerName, int[][] battlefield) { //метод расстановки кораблей
@@ -49,6 +49,11 @@ public class Battleship {
             System.out.println("1. Vertical.");
             System.out.println("2. Horizontal.");
             int direction = scanner.nextInt(); //храним в переменной rotation выбранное значение направления корабля
+
+            if(!isAvailable(x, y, deck, direction, battlefield)) { //
+                System.out.println("Wrong coordinates!");
+                continue;
+            }
 
             for (int i = 0; i < deck; i++) {
                 if(direction == 1){
@@ -97,12 +102,12 @@ public class Battleship {
             int x = scanner.nextInt();
             System.out.println("please enter nY coordinate:");
             int y = scanner.nextInt();
-            if (battlefield[y][x] == 1) { //сверяемся, попал ли игрок
+            if (battlefield[x][y] == 1) { //сверяемся, попал ли игрок
                 System.out.println("Hit! Make your turn again!");
-                monitor[y][x] = 2;
+                monitor[x][y] = 2;
             } else {
                 System.out.println("Miss! Your opponents turn!");
-                monitor[y][x] = 1;
+                monitor[x][y] = 1;
                 break; //прервет внешний цикл
             }
         }
@@ -137,5 +142,53 @@ public class Battleship {
             return true;
         }
         return false;
+    }
+
+    public static boolean isAvailable(int x, int y, int deck, int rotation, int[][] battlefield) { //метод проверки выхода за границу поля
+        if(rotation == 1) { //если корабль размещен вертикально...
+            if(y + deck > battlefield.length + 1) { //проверяем y
+                return false;
+            }
+        }
+        if(rotation == 2) { //если корабль размещен горизонтально...
+            if(x + deck > battlefield.length + 1) { //проверяем x
+                return  false;
+            }
+        }
+
+        //проверка на невозможность размещения корабля на рядомстоящие клетки
+        while(deck !=0) {
+            for (int i = 0; i < deck; i++) {
+                int xi = 0;
+                int yi = 0;
+                if(rotation == 1){
+                    yi = i;
+                } else {
+                    xi = 1;
+                }
+                if(x + 1 + xi < battlefield.length && x + 1 + xi >= 0) {
+                    if(battlefield[x + 1 + xi][y + yi] != 0) {
+                        return false;
+                    }
+                }
+                if(x - 1 + xi < battlefield.length && x - 1 + xi >= 0) {
+                    if(battlefield[x - 1 + xi][y + yi] != 0) {
+                        return false;
+                    }
+                }
+                if(y + 1 + yi < battlefield.length && y + 1 + yi >= 0) {
+                    if(battlefield[x + xi][y + 1 + yi] != 0) {
+                        return false;
+                    }
+                }
+                if(y - 1 + yi < battlefield.length && y - 1 + yi >= 0) {
+                    if(battlefield[x + xi][y - 1 + yi] != 0) {
+                        return false;
+                    }
+                }
+            }
+            deck--;
+        }
+        return true;
     }
 }
