@@ -15,7 +15,7 @@ public class Battleship {
         playerName1 = scanner.nextLine(); //объект scanner вызывает метод nextLine() который вернет строку введенную с клавы переменной playerName1
         System.out.println("Player#2, please enter your name:");
         playerName2 = scanner.nextLine(); //объект scanner вызывает метод nextLine() который вернет строку введенную с клавы переменной playerName2
-        
+
         placeShips(playerName1, battlefield1);
         placeShips(playerName2, battlefield2);
 
@@ -133,12 +133,12 @@ public class Battleship {
         }
 
         if (counter1 >= 10) {
-            System.out.println(playerName1 + " WIN!!!");
+            System.out.println(playerName1 + " Победа!!!");
             return true;
         }
 
         if (counter2 >= 10) {
-            System.out.println(playerName2 + " WIN!!!");
+            System.out.println(playerName2 + " Победа!!!");
             return true;
         }
         return false;
