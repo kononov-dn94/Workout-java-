@@ -146,7 +146,7 @@ public class Battleship {
 
     public static boolean isAvailable(int x, int y, int deck, int rotation, int[][] battlefield) { //метод проверки выхода за границу поля
         if(rotation == 1) { //если корабль размещен вертикально...
-            if(y + deck > battlefield.length + 1) { //проверяем y
+            if(y + deck > battlefield.length + 1) {  //проверяем y
                 return false;
             }
         }
