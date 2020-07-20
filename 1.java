@@ -11,9 +11,9 @@ public class Battleship {
     static int[][] monitor2 = new int[10][10]; //массив для размещения попаданий 2-го игрока
 
     public static void main(String[] args) {
-        System.out.println("Player#1, please enter your name:");
+        System.out.println("Игрок №1, пожалуйста, введите ваше имя:");
         playerName1 = scanner.nextLine(); //объект scanner вызывает метод nextLine() который вернет строку введенную с клавы переменной playerName1
-        System.out.println("Player#2, please enter your name:");
+        System.out.println("Игрок №2, пожалуйста, введите ваше имя:");
         playerName2 = scanner.nextLine(); //объект scanner вызывает метод nextLine() который вернет строку введенную с клавы переменной playerName2
 
         placeShips(playerName1, battlefield1);
@@ -36,22 +36,22 @@ public class Battleship {
         int deck = 4; //счетчик, инициализация для 4-х палубного корабля
         while(deck >= 1) {
             System.out.println();
-            System.out.println(playerName + ", please place your " + deck +"-deck ship on the battlefield:");
+            System.out.println(playerName + ", пожалуйста, разместите " + deck +"-палубный корабль на поле:");
             System.out.println();
 
             drawField(battlefield);
 
-            System.out.println("please enter nX coordinate:");
+            System.out.println("пожалуйста, введите nX координату:");
             int x = scanner.nextInt(); //объект scanner вызывает метод nextInt который вернет целое число в переменную x и запишет его значение
-            System.out.println("please enter nY coordinate:");
+            System.out.println("пожалуйста, введите nY координату:");
             int y = scanner.nextInt(); //объект scanner вызывает метод nextInt который вернет целое число в переменную y и запишет его значение
-            System.out.println("Choose direction:");
-            System.out.println("1. Vertical.");
-            System.out.println("2. Horizontal.");
+            System.out.println("Выберите направление:");
+            System.out.println("1. Вертикально.");
+            System.out.println("2. Горизонтально.");
             int direction = scanner.nextInt(); //храним в переменной rotation выбранное значение направления корабля
 
             if(!isAvailable(x, y, deck, direction, battlefield)) { //
-                System.out.println("Wrong coordinates!");
+                System.out.println("Неправильные координаты!");
                 continue;
             }
 
@@ -83,7 +83,7 @@ public class Battleship {
 
     public static void makeTurn(String playerName, int[][] monitor, int[][] battlefield) { //метод для поля ходов оппоненита
         while(true) { //цикл попаданий, прервется только в случае промоха игрока
-            System.out.println(playerName + "please, make your turn.");
+            System.out.println(playerName + "пожалуйста, сделайте ваш ход");
             System.out.println("  0 1 2 3 4 5 6 7 8 9");
             for (int i = 0; i < monitor.length; i++) { //цикл вывода(отображения игрового поля)
                 System.out.print(i + " ");
@@ -98,15 +98,15 @@ public class Battleship {
                 }
                 System.out.println();
             }
-            System.out.println("please enter nX coordinate:");
+            System.out.println("пожалуйста, введите nX координату:");
             int x = scanner.nextInt();
-            System.out.println("please enter nY coordinate:");
+            System.out.println("пожалуйста, введите nY координату:");
             int y = scanner.nextInt();
             if (battlefield[x][y] == 1) { //сверяемся, попал ли игрок
-                System.out.println("Hit! Make your turn again!");
+                System.out.println("Попадание! Стрелай еще!");
                 monitor[x][y] = 2;
             } else {
-                System.out.println("Miss! Your opponents turn!");
+                System.out.println("Промах! Теперь очередь Вашего аппонента!");
                 monitor[x][y] = 1;
                 break; //прервет внешний цикл
             }
@@ -146,7 +146,7 @@ public class Battleship {
 
     public static boolean isAvailable(int x, int y, int deck, int rotation, int[][] battlefield) { //метод проверки выхода за границу поля
         if(rotation == 1) { //если корабль размещен вертикально...
-            if(y + deck > battlefield.length + 1) {  //проверяем y
+            if(y + deck > battlefield.length + 1) { //проверяем y
                 return false;
             }
         }
