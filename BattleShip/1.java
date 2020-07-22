@@ -181,7 +181,7 @@ public class Battleship {
                         return false;
                     }
                 }
-                if(y - 1 + yi < battlefield.length && y - 1 + yi >= 0) {
+                if(y - 1 + yi < battlefield.length && y - 1 + yi >= 0) { 
                     if(battlefield[x + xi][y - 1 + yi] != 0) {
                         return false;
                     }
