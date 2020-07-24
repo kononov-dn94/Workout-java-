@@ -170,7 +170,7 @@ public class Battleship {
                     if(battlefield[x + 1 + xi][y + yi] != 0) {
                         return false;
                     }
-                }
+                } 
                 if(x - 1 + xi < battlefield.length && x - 1 + xi >= 0) {
                     if(battlefield[x - 1 + xi][y + yi] != 0) {
                         return false;
