@@ -9,7 +9,7 @@ public class DoWhile {
 		int years = 0; //кол-во лет, за которые будет внесена вся сумма
 		double interestRate = 0.1; //проценты, которые будут начисленны за год
 
-		 while(currentBalance < finalBalance) {
+		do {
 			currentBalance = currentBalance + deposit; //высчитываем текущий баланс на счете
 			month++;
 			System.out.println("Month" + month + " - " +currentBalance);
@@ -50,7 +50,7 @@ public class DoWhile {
 				if(years == 6) {
 					currentBalance = currentBalance + currentBalance * interestRate;
 				}
-			} //не выполняет условие проверки на общую сумму после сробатывания 4 года
+			} while(currentBalance < finalBalance && years == 5);//не выполняет условие проверки на общую сумму после сробатывания 4 года
 		}
 	}
 }
