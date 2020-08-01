@@ -15,7 +15,7 @@ private void checkUserGuess(String userGuess) {
 }
 
 private void finishGame() {
-	System.out.println("Все сайты ушли ко дну! Ваши акции теперь ничего не стоят.");
+	System.out.println("Все сайты ушли ко дну! Ваши акции теперь ничего не стоят."); //
 	if(numOfGuesses <= 18) {
 		System.out.println("Это заняло у вас всего" + numOfGuesses + "попытокю");
 		System.out.println("Вы успели выбраться до того, как ваши вложения утонули.");
