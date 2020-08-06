@@ -24,7 +24,6 @@ class XCopy {
 		goTest2(testobj);
 
 		System.out.println(testobj.val);
-		////
 		String test_str = "the";
 		String out_str = goObject(test_str);
 		System.out.println(test_str);
