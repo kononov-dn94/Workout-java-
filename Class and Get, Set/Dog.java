@@ -21,7 +21,6 @@ public class Dog {
 		if(paws == 4) {
 			this.paws = paws;
 		} else {
-			this.paws = 4;
 			System.out.println("User tried to assing " +paws+ "paws for a dog");
 			System.out.println("Correct number is 4");
 		}
@@ -39,7 +38,6 @@ public class Dog {
 		if(tail == 1) {
 			this.tail = tail;
 		} else {
-			this.tail = 1;
 			System.out.println("User tried to assing " +tail+ "paws for a dog");
 			System.out.println("Correct number is 1");
 		}
@@ -52,6 +50,7 @@ public class Dog {
 	public void setBreed(String breed) {
 		this.breed = breed;
 	}
+
 	
 }
 
