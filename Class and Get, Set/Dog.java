@@ -4,6 +4,18 @@ public class Dog {
 	public String name;
 	public String breed;
 
+	private String size; //размер собаки
+	public void setSize(String size) {
+		if(size.equalsIgnoreCase("Big") || size.equalsIgnoreCase("Average") || size.equalsIgnoreCase("Small")) {
+			this.size = size;
+		} else {
+			System.out.println("Size should be one of these: Big, Average of Small");
+		}
+	}
+	public String getSize() {
+		return size;
+	}
+
 	public void setName(String name) {
 		this.name = name; //полю текущего обьекта присваиваем передаваемое имя 
 	/*или 
@@ -49,6 +61,20 @@ public class Dog {
 
 	public void setBreed(String breed) {
 		this.breed = breed;
+	}
+
+	public void bark() { //лай псины (сутулой)
+		if(size.equalsIgnoreCase("Big")) {
+			System.out.println("Wof-Wof");
+		} else if(size.equalsIgnoreCase("Average")) {
+			System.out.println("Raf-Raf");
+		} else {
+			System.out.println("Tiaf-Tiaf");
+		}
+	}
+
+	public void bite() { //размер собаки
+
 	}
 
 	
