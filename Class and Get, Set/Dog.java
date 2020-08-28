@@ -1,8 +1,19 @@
 public class Dog {
+	private static int dogsCount;
+
 	public int paws;
 	public int tail;
 	public String name;
 	public String breed;
+
+	public Dog() { //конструктор
+		dogsCount++;
+		System.out.println("Dog's count is "+dogsCount);
+	}
+
+	public static int getDogsCount() {
+		return dogsCount;
+	}
 
 	private String size; //размер собаки
 	public void setSize(String size) {
@@ -63,7 +74,7 @@ public class Dog {
 		this.breed = breed;
 	}
 
-	public void bark() { //лай псины (сутулой)
+	public void bark() { //лай (псины сутулой)
 		if(size.equalsIgnoreCase("Big")) {
 			System.out.println("Wof-Wof");
 		} else if(size.equalsIgnoreCase("Average")) {
@@ -74,7 +85,11 @@ public class Dog {
 	}
 
 	public void bite() { //размер собаки
-
+		if(dogsCount > 2) {
+			System.out.println("Dog's are biting you");
+		} else {
+			bark();
+		}
 	}
 
 	
