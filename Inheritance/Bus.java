@@ -3,6 +3,5 @@ public class Bus extends Auto {
 		super(producer, model, engineType);
 		System.out.println("Bus was initialized");
 	}
-	
 
 }
