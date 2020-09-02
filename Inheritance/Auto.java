@@ -3,7 +3,7 @@ public class Auto {
 	private String model;
 	private EngineType engineType;
 	private int currentSpeed;
-	private boolean isRunning;
+	protected boolean isRunning;
 
 	public Auto(String producer, String model, EngineType engineType) {
 		this.producer = producer;
