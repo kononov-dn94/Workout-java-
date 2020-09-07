@@ -13,7 +13,14 @@ public class Bus extends FuelAuto {
 		fuelUp(volume);
 	}
 
-	
+	//@Override (переопределение)
+	public void fuelUp(int petrolVolume) {
+		int volume = getAvailablePetrol()+petrolVolume;
+
+		if(volume > getTankVolume()) {
+			setAvailblePetrol(getTankVolume());
+		}
+	}
 
 	public int getPassengerNumber() {
 		return passengerNumber;

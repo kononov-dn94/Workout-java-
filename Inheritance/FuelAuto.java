@@ -10,7 +10,7 @@ public class FuelAuto extands Auto {
 	}
 
 	public void fuelUp(int petrolVolume) {
-		avaliblePetrol+=petrolVolume;
+		availablePetrol += retrolVolume;
 		System.out.println("Adding fuel");
 	}
 
