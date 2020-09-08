@@ -1,16 +1,16 @@
-public class FuelAuto extands Auto {
+public class FuelAuto extends Auto {
 
 	private int avaliblePetrol;
 	private int tankVolume;
 
-	public PetrolAuto(String produser, String model, EngineType engineType, int availablePetrol, int tankVolume) {
+	public FuelAuto(String produser, String model, EngineType engineType, int availablePetrol, int tankVolume) {
 		super(produser, model, engineType);
 		this.availablePetrol = availablePetrol;
 		this.tankVolume = tankVolume;
 	}
 
 	public void fuelUp(int petrolVolume) {
-		availablePetrol += retrolVolume;
+		availablePetrol += petrolVolume;
 		System.out.println("Adding fuel");
 	}
 
