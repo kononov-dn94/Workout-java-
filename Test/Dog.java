@@ -14,7 +14,7 @@ public class Dog {
 	}
 
 	public String getName() {
-		return name;
+		return name; 
 	}
 
 	public void setPaws(int paws) {
