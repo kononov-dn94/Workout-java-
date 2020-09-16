@@ -9,7 +9,7 @@ public class ArrayLauncher {
 		System.out.println("Please enter 8 int elements");
 
 		for(int j = 0; j < myArray.length; j++) {
-			System.out.println("Next element");
+			System.out.println("Next element ");
 			scanner.nextInt();
 		}
 
