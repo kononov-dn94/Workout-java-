@@ -10,7 +10,7 @@ public class ArrayLauncher {
 
 		for(int j = 0; j < myArray.length; j++) {
 			System.out.println("Next element ");
-			scanner.nextInt();
+			myArray[j] = scanner.nextInt();
 		}
 
 		for(int i = 0; i < myArray.length; i++) {
