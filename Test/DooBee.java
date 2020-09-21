@@ -6,7 +6,7 @@ public class DooBee {
 			System.out.println("Bee");
 			x = x+1;
 			}
-		if (x == 3){
+		if (x == 2){ //or 3
 			System.out.print("Do");
 		}
 	}
