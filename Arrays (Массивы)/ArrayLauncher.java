@@ -19,12 +19,6 @@ public class ArrayLauncher {
 
 	}
 
-	/*10, 5, 16, 4,
-	передаем этот массив методу sort
-	сравнивам каждый текущий эллемент со следующим
-	array.length-1 нужен для того, чтоб в конце мессива не
-	выйти за рамки и не получить ошибку выполнения*/
-	
 	private static int[] sort(int[] array) { //пузырьковый-метод сортировки массива
 		for(int i = 0; i < array.length; i++) {
 			for(int j = 0; j < array.length-1; j++) {
