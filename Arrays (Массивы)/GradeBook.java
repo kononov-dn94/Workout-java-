@@ -13,7 +13,7 @@ public class GradeBook {
 			{76, 72, 84},
 			{87, 93, 73}};
 
-		System.out.println("Minimal grade "+calcMin(gradesArray));
+		System.out.println("Minimal grade "+calcMin(gradesArrays));
 	}
 
 	private static int calcMin(int[][] grades) { //метод для поиска минимального значения
