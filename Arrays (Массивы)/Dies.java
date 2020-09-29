@@ -35,5 +35,6 @@ public class Dies {
 			}
 			System.out.println();
 		}
+		System.out.println();
 	}
 }
