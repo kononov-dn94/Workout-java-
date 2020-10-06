@@ -1,18 +1,34 @@
 package com.java.collections.list;
 
 import java.util.Arrays;
+import java.uril.List;
 
 public class ListRunner {
-	public static void main(String[] args) {
-		int [] array = new int[5];
-		for(int i = 0; i < array.lengh; i++) {
-		array[i] = i * 2;
-		}
-	
-		int[] nArray = new int[10];
-		System.arraycopy(array, 0, nArray, 0, array.lengh);
-		nArray[6] = 100;
-		System.out.println(Arrays.toString(nArray));
+	private List<String> toDoList = new ArrayList<>();
+
+	public void addToList(String task) {
+		toDoList(task);
 	}
 
+	public void addToListatPosition(int position, String task) {
+		toDoList.add(position, task);
+	}
+
+	public void printToDoList() {
+		for(int i = 0; i<toDoList.size(); i++) {
+			System.out.println(i+" - "+toDoList.get(i));
+		}
+	}
+
+	public void changeTask(int index, String task) {
+		toDoList.set(index, task); // set позволяет перезаписать элемент в списке
+	}
+
+	public void removeTask(String task) {
+		toDoList.remove(task);
+	}
+
+	public int getTaskPriority(String task) {
+		return toDoList.indexOf(task);
+	}
 }
