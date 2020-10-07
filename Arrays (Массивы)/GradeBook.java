@@ -1,4 +1,4 @@
-package com.javacode.collections.arrays;
+//package com.javacode.collections.arrays;
 
 public class GradeBook {
 	public static void main(String[] args) {
@@ -13,7 +13,11 @@ public class GradeBook {
 			{76, 72, 84},
 			{87, 93, 73}};
 
-		System.out.println("Minimal grade "+calcMin(gradesArrays));
+		System.out.println("Minimal grade: "+calcMin(gradesArrays));
+		System.out.println("Maximal grade: "+calcMax(gradesArrays));
+
+		varArgs();
+		/*processArrays();*/
 	}
 
 	private static int calcMin(int[][] grades) { //метод для поиска минимального значения
@@ -27,4 +31,54 @@ public class GradeBook {
 		}
 		return min;
 	}
+
+	
+	private static int calcMax(int[][] grades) { //метод для поиска максимального значения
+		int max = 0;
+		for(int[] row: grades) {
+			for(int i: row) {
+				if(max < i) {
+					max = i;
+				}
+			}
+		}
+		return max;
+	}
+
+	private static void varArgs() { //аргументы переменной длинны(записанные по другому массивы)
+		double a = 0.56;
+		double b = 1.92;
+		double c = 3.45;
+		double d = 5.01;
+
+		System.out.println("Avarage of 2 elements is "+calcAverage(a,b));
+		System.out.println("Avarage of 3 elements is "+calcAverage(a,b,c));
+		System.out.println("Avarage of 3 elements is "+calcAverage(c,b,d));
+		System.out.println("Avarage of 4 elements is "+calcAverage(a,b,c,d));
+	}
+
+	private static double calcAverage(double... args){ //метод сложения переменных из метода varArgs(принимающая аргументы переменной длинны)
+		double sum = 0;
+		for(double i: args) {
+			sum = sum + i;
+		}
+
+		return sum/args.length;
+	}
+
+	/*private static void processArrays() {
+		double[] doubleArray = {8.9, 5.65, 8.12, 45.0, 77.1};
+		Arrays.sort(doubleArray);
+		System.out.println(Arrays.toSting(doubleArray));
+
+		int[] filledArrays = new int[7];
+		Arrays.fill(filledArray, 7);
+		System.out.println(Arrays.toString(filledArray));
+
+		int[] intArray = {1, 2, 3, 4, 5, 6, 7}
+		int[] arrayCopy = new int[10];
+
+		System.arraycopy(intArray, 0, arrayCopy, 0, intArray.lengh);
+		System.out.println(Arrays.toString(arrayCopy));
+	}*/
 }
