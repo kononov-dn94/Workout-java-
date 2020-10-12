@@ -22,7 +22,7 @@ public class GradeBook {
 
 	private static int calcMin(int[][] grades) { //метод для поиска минимального значения
 		int min = 100;
-		for(int[] row: grades) { //для каждого row, наше grades...
+		for(int[] row: grades) {
 			for(int i: row) {
 				if(min > i) {
 					min = i;
