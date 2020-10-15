@@ -66,7 +66,7 @@ public class GradeBook {
 		return sum/args.length;
 	}
 
-	/*private static void processArrays() {
+	private static void processArrays() {
 		double[] doubleArray = {8.9, 5.65, 8.12, 45.0, 77.1};
 		Arrays.sort(doubleArray);
 		System.out.println(Arrays.toSting(doubleArray));
@@ -80,5 +80,5 @@ public class GradeBook {
 
 		System.arraycopy(intArray, 0, arrayCopy, 0, intArray.lengh);
 		System.out.println(Arrays.toString(arrayCopy));
-	}*/
+	}
 }
