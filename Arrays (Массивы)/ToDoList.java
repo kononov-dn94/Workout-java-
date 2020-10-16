@@ -1,3 +1,5 @@
+public class ToDoList {
+
 	private List<String> toDoList = new ArrayList<>();
 
 	public void addToList(String task) {
@@ -9,8 +11,12 @@
 	}
 
 	public void printToDoList() {
-		for(int i = 0; i<toDoList.size(); i++) {
-			System.out.println(i+" - "+toDoList.get(i));
+//		for(int i = 0; i<toDoList.size(); i++) {
+//			System.out.println(i+" - "+toDoList.get(i));
+//		}
+		iterator<String> iterator = toDoList.iterator();
+		while (iterator.hasNext()) {
+			System.out.println("Element " +iterator.next());
 		}
 	}
 
