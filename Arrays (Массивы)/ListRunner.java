@@ -10,7 +10,7 @@ public class ListRunner {
 		while(param!=0)	{
 			switch(param) {
 				case 1:
-					System.out.println("pl");
+					System.out.println("please enter a task to add");
 					break;
 				case 2:
 					break;
