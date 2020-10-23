@@ -11,8 +11,15 @@ public class ListRunner {
 			switch(param) {
 				case 1:
 					System.out.println("please enter a task to add");
+					scanner.nextLine();
+					String task1 = scanner.nextLine();
+					list.addToList(task1);
+					System.out.println("Please choose an action by typing [0-6]");
 					break;
 				case 2:
+					System.out.println("Printing out TO DO LIST");
+					list.printToDoList();
+					System.out.println("Please choose an action by typing[0-6]");
 					break;
 				case 3:
 					break;
