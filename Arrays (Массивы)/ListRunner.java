@@ -22,6 +22,13 @@ public class ListRunner {
 					System.out.println("Please choose an action by typing[0-6]");
 					break;
 				case 3:
+					System.out.println("please enter a task remove");
+					scanner.nextLine();
+					String task3 = scanner.nextLine();
+					list.addToList(task3);
+					System.out.println("Please choose an action by typing [0-6]");
+					param = scanner.nextInt();
+					break;
 					break;
 				case 4:
 					System.out.println("please enter a task remove");
