@@ -59,7 +59,7 @@ public class ListRunner {
 					System.out.println("Please choose an action by typing [0-6]");
 					param = scanner.nextInt();
 					break;
-					default:
+					default: //в случае некорректного ввода выведет инфу хранящуюся в кнопке 0
 						param = 0;
 
 			}
