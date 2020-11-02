@@ -60,7 +60,7 @@ public class ListRunner {
 					param = scanner.nextInt();
 					break;
 					default: //в случае некорректного ввода выведет инфу хранящуюся в кнопке 0
-						param = 0;
+					param = 0;
 
 			}
 		}
