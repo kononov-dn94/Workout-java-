@@ -6,8 +6,18 @@ import java.util.List;
 
 public class CollectionMain {
 	public static void main(String[] args) {
-		List<Object> list = new LinkedList<>();
-		List.add("add");
-		List.add(1);
+		List<Integer> list = new LinkedList<>();
+		List.add(Integer.valueOf(1));
+
+		Integer integ = 56;
+		int n = integ.Value();
+		Double doub = 56.567;
+		double d = doub.doubValue();
+
+		String[] colors = {"yellow", "green", "blue"};
+
+		LinkedList<String> ll = new LinkedList<>(Arrays.asList(colors));
+
+		collor = ll.toArray(new String[]);
 	}
 }
