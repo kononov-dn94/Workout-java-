@@ -1,8 +1,8 @@
-package com.javacode.collections.autoboxing;
+/*package com.javacode.collections.autoboxing;
 
 import java.util.Arrays;
 import java.util.LinkedList;
-import java.util.List;
+import java.util.List;*/
 
 public class CollectionMain {
 	public static void main(String[] args) {
@@ -17,7 +17,12 @@ public class CollectionMain {
 		String[] colors = {"yellow", "green", "blue"};
 
 		LinkedList<String> ll = new LinkedList<>(Arrays.asList(colors));
+		ll.add("black");
 
-		collor = ll.toArray(new String[]);
+		collors = ll.toArray(new String[ll.size()]);
+
+		for (int i = 0; i < colors.length; i++) {
+			System.out.println(colors[i]);
+		}
 	}
 }
