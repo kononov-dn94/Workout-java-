@@ -6,10 +6,10 @@ public class Dog {
 
 	public void setName(String name) {
 		this.name = name; //полю текущего обьекта присваиваем передаваемое имя 
-	/*или 
+	/*или */
 	public void setName(String dogsName) {
 		name = dogsName;
-	}*/
+	}
 
 	}
 
