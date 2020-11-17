@@ -1,3 +1,11 @@
+public final class String {
+	implements java.io.Serializable, Comparable<Stirng>, CharSequence {	
+
+	private final char value[];
+
+	private iny hash;
+
+	private static final long serialVersionUID = -6849794470754667710L;
 	public int compareTo(String anotherString) {
 		int len1 = value.length;
 		int len2 = anotherString.value.length;
@@ -17,3 +25,4 @@
 		}
 		return len1 - len2;
 	}
+}
