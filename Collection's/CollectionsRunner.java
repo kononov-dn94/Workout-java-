@@ -20,9 +20,26 @@ public class CollectionsRunner {
 			this.face = face;
 		}
 
+		public Suit getSuit() {
+			return suit;
+		}
+
+		public Face getFace() {
+			return face;
+		}
+
 		@Override
-		public int compareTo(Card o) {
-			
+		public int compareTo(Card card) {
+			Face[] values = face.values();
+			List<Face> faces = Array.asList(values);
+
+			if(faces.indexOf(this.face) < faces.indexOf(card.getFace())) {
+				return -1;
+			} else if(faces.indexOf(this.face) > faces.indexOf(card.getFace())) {
+				return +1;
+			} else if(faces.indexOf(this.face) == faces.indexOf(card.getFace())) {
+				return String.valueOf(suit).compareTo(String.valueOf(card.getSuit));
+			}
 
 			return 0;
 		}
