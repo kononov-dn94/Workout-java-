@@ -21,6 +21,7 @@ public final class String {
 			if(c1 != c2) {
 				return c1 - c2;
 			}
+
 			k++
 		}
 		return len1 - len2;
