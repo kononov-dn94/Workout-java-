@@ -38,8 +38,8 @@ class Song {
 	}
 	
 	void setArtistTitle(String a, String t) {
-		/*this.Artist = a;
-		this.Title = t;*/
+		this.Artist = a;
+		this.Title = t;
 		this.setArtist(a);
 		this.setTitle(t);
 
