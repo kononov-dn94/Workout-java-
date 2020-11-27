@@ -6,6 +6,13 @@ import java.util.List;
 
 public class CollectionsRunner {
 	public static void main(String[] args) {
+
+		List<Card> deckOfCards = new ArrayList<>();
+		for(Card.Face face : Card.Face.values()) {
+			for(Card.Suit suit : Card.Suit.values()) {
+				deckOfCards.add(new Card(suit, face));
+			}
+		}
 	
 		List<Card> deckOfCards = new ArrayList<>();
 		for(Card.Face face: Card.Face.values()) {
