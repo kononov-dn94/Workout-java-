@@ -6,15 +6,19 @@ import java.util.Collections;
 */
 
 public class minFour {
+    
     public static int min(int a, int b, int c, int d) {
         //напишите тут ваш код
+        //System.out.println();
         int[] result = {a, b, c, d};
+        int minValue = min(a, b);
         for(int i = 0; i < result.length; i++) {
-            if(result[i] < 1)
-            System.out.println(result[i]);
+            if(result[i] < minValue) {
+                minValue = result[i];
+            }
         }
-        
-        return 0;
+        //System.out.println(minValue);
+        return minValue;
 
     }
 
@@ -38,3 +42,4 @@ public class minFour {
         System.out.println(min(-20, -10, -30, -40));
     }
 }
+
