@@ -1,9 +1,3 @@
-package com.javarush.task.task02.task0204;
-
-/* 
-О семейных отношениях
-*/
-
 public class Solution {
     public static void main(String[] args) {
         Woman woman = new Woman();
