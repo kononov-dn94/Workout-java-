@@ -23,8 +23,14 @@ public class ArrayLauncher {
 		for (int j = 0; j < myArray2.length; j++) {
 			System.out.println("Next element");
 			myArray2[j] = scanner.nextInt();
+		}		
+	}
+	
+	//сортировка массива
+	public static int[] sort(int[] array) { //копируем наш ранее созданный массив
+		int[]myNewArray = new int[array.length];
+		for(int i = 0; i<array.length; i++) {
+			myNewArray[i] = array[i]
 		}
-		
-		
 	}
 }
