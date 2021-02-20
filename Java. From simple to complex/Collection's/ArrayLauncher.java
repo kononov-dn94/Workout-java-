@@ -3,34 +3,43 @@ import java.util.Scanner;
 public class ArrayLauncher {
 	public static Scanner scanner = new Scanner(System.in);
 	public static void  main(String[] args) {
-		int[] myArray = {0, 100, 200, 300, 400, 500};
-		/*int[] myArray = new int[6];
-		myArray[0] = 0;
-		myArray[1] = 100;
-		myArray[2] = 200;
-		myArray[3] = 300;
-		myArray[4] = 400;
-		myArray[5] = 500;*/
 		
-		for(int i = 0; i < myArray.length; i++) {
-			System.out.println("Element #" + i + " = " + myArray);
+		int[] myArray = new int[8];
+		System.out.println("Please enter 8 int elements");
+		for (int j = 0; j < myArray.length; j++) {
+			System.out.println("Next element");
+			myArray[j] = scanner.nextInt();
 		}
 		
-		System.out.println("Element 4 = " +myArray[4]);
-		
-		int[] myArray2 = new int[8];
-		System.out.println("Please enter 8 int elements");
-		for (int j = 0; j < myArray2.length; j++) {
-			System.out.println("Next element");
-			myArray2[j] = scanner.nextInt();
+		int[] array = sort(myArray);
+		for(int i = 0; i < array.length; i++) {
+			System.out.println("Element #" + i + " = " + myArray[i]);
 		}		
 	}
 	
-	//сортировка массива
-	public static int[] sort(int[] array) { //копируем наш ранее созданный массив
+	public static int[] sort(int[] array) { 
+		//Как скопировать наш массив?!
+		/*копируем наш ранее созданный массив
 		int[]myNewArray = new int[array.length];
 		for(int i = 0; i<array.length; i++) {
 			myNewArray[i] = array[i]
 		}
+		
+		//или можно сделать так
+		int[]myNewArray = Array.copyOf(array, array.length);*/
+		
+		//пузырьковая сортировка
+		for(int i = 0; i < array.length; i++) {
+			for(int j = 0; j < array.length-1; j++) {
+				//нужно отсортировать наши элементы от меньшего к большему, по этому нужно...
+				if(array[j] > array[j+1]) {
+					int temp = array[j];
+					array[j] = array[j+1];
+					array[j+1] = temp;
+				}
+			}
+		}
+		
+		return array;
 	}
 }
