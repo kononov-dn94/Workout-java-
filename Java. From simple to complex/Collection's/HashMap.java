@@ -11,4 +11,21 @@ public class Main {
 
    }
 
+// Нарушение симметричности
+public class SomeStringify {
+    private String s;
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o instanceof SomeStringify) {
+            return s.equals(((SomeStringify) o).s);
+        }
+        // нарушение симметричности, классы разного происхождения
+        if (o instanceof String) {
+            return s.equals(o);
+        }
+        return false;
+    }
+}
 }
