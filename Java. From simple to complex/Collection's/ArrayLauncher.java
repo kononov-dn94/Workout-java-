@@ -18,6 +18,7 @@ public class ArrayLauncher {
 	}
 	
 	public static int[] sort(int[] array) { 
+	
 		//Как скопировать наш массив?!
 		/*копируем наш ранее созданный массив
 		int[]myNewArray = new int[array.length];
