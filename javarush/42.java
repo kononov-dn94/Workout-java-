@@ -34,4 +34,5 @@ public class Solution {
         System.out.println("количество положительных чисел: " + countPositive);
     }
 }
+//
 
