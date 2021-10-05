@@ -1,16 +1,19 @@
-public class Auto {
+public abstract class Auto {
 	private String producer;
 	private String model;
-	private EngineType engineType;
+	private Engine engine;
 	private int currentSpeed;
 	protected boolean isRunning;
 
-	public Auto(String producer, String model, EngineType engineType) {
+	public Auto(String producer, String model, Engine engine) {
 		this.producer = producer;
 		this.model = model;
 		this.engineType = engineType;
 		System.out.println("Auto was initialized");
 	}
+	
+	public abstract void energize();
+	
 
 	public void start() {
 		isRunning = true;

@@ -13,7 +13,7 @@ public class Bus extends FuelAuto {
 		fuelUp(volume);
 	}
 
-	@Override //(переопределение)
+	@Override
 	public void fuelUp(int petrolVolume) {
 		int volume = getAvailablePetrol()+petrolVolume;
 
@@ -42,6 +42,10 @@ public class Bus extends FuelAuto {
 		
 		paseengerNumber = 0;
 		System.out.println("Passengers released");
+	}
+	@Override
+	public void energize() {
+		fuelUP(getTankVolume() - getAvailablePotrol());
 	}
 
 }

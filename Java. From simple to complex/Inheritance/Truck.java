@@ -7,6 +7,7 @@ public class Truck extends FuelAuto {
 		this.cargoWeight = cargoWeight;
 		System.out.println("Constructing trusk");
 	}
+	
 
 	public int getCargoWeight() {
 		return cargoWeight;
@@ -22,5 +23,26 @@ public class Truck extends FuelAuto {
 
 	public void unload() {
 		System.out.println("Cargo unloaded");
+	}
+	
+	@Override
+	public void start() {
+		isRunning = true;
+		setCurrentSpeed(10);
+		System.out.println("Truck is starting");
+	}
+	
+	@Override
+	public void stop() {
+		isRunning = false;
+		setCurrentSpeed(0);
+		System.out.println("Truck is stopped");
+	}
+	
+	
+	
+	@Override
+	public void energize() {
+		fuelUP(getTankVolume() - getAvailablePotrol());
 	}
 }
